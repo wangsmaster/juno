@@ -3,7 +3,7 @@ export default class Dark {
     this.dark = '';
   }
 
-  // Read from localstorage
+  // save to localstorage
   saveLocal() {
     localStorage.setItem('dark', JSON.stringify(this.dark));
   }

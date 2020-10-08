@@ -19,8 +19,8 @@ import '../css/main.scss';
 
 // Global App state
 const state = {};
-// Leak state to global object for developing porpuses
-// window.state = state;
+// Leak state to global object for developing purposes
+// window.state = state; 
 
 // --- CONTROLLERS ---
 
@@ -196,7 +196,8 @@ const savedController = id => {
 
 // --- EVENT LISTENERS ---
 base.elements.container.addEventListener('click', e => {
-  const closeBtn = e.target.closest('.close-popup');
+  // find the closest node that matches the provided selector string
+  const closeBtn = e.target.closest('.close-popup');  // 
   const addCityBtn = e.target.closest('.add__city');
   const searchItem = e.target.closest('.search__results__single');
   const cityCard = e.target.closest('.cities__weather');
@@ -283,6 +284,11 @@ base.elements.container.addEventListener('click', e => {
 
 // On page load
 window.addEventListener('load', () => {
+
+  // check if page is loaded
+
+  console.log('page is loaded');
+
   // Render Home
   base.clearUI();
   homeView.renderHome();

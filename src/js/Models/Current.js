@@ -51,10 +51,15 @@ export default class Current {
   async getWeather() {
     try {
       const res = await axios.get(
+        // `process` is a global object (of NodeJS) that provide information about, and control over the current Node.js process
         `${process.env.PROXY}api.openweathermap.org/data/2.5/weather?lat=${
           this.coords[0]
         }&lon=${this.coords[1]}&units=metric&appid=${process.env.APIKEY}`
       );
+      
+      // // save all weather info in json object
+      // this.weatherJSON = res.data;
+
       // Save the data on the object
       this.name = res.data.name;
       this.country = res.data.sys.country;
@@ -64,6 +69,8 @@ export default class Current {
         temp_min: Math.round(res.data.main.temp_min),
         name: res.data.weather[0].main,
         icon: res.data.weather[0].icon,
+        // add wind speed
+        wind: Math.round(res.data.wind.speed),
       };
     } catch (err) {
       // Div of main weather

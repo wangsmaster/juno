@@ -3,20 +3,26 @@ import { elements } from './base';
 // Render Initial view
 export const renderHome = () => {
   const markup = `
+  <!-- darkmode selector -->
     <div class="darkmode">
     <span class="darkmode__text">Dark Mode:</span>
     <input name= "checkbox" type="checkbox" id="switch" class="switch" /><label for="switch">Toggle</label>
     </div>
+  <!-- -->
+
     <div class="current noselect">
+      <!-- title - current location -->
       <div class="title animated fadeIn">
         <svg class="title__icon">
           <use xlink:href="./img/symbol-defs.svg#icon-location"></use>
         </svg>
         <h1 class="title__text">Current Location</h1>
       </div>
-      <div class="main__weather animated fadeIn">
+      <!-- -->
 
-      </div>
+      <!-- display of weather and location -->
+      <div class="main__weather animated fadeIn"></div>
+      <!-- -->
     </div>
     <div class="other">
       <div class="title animated fadeIn">
@@ -64,7 +70,12 @@ export const renderWeather = (result, container, place) => {
       <div class="main__weather__text--minmax animated fadeIn">${
         result.weather.temp_min
       }ºC <span class="dot">•</span> ${result.weather.temp_max}ºC</div>
+
+      <!-- add wind speed -->
+      <div class="main__weather__text--phrase animated fadeIn">Wind: ${result.weather.wind} m/s</div>
     </div>
+
+    
   `;
     container.insertAdjacentHTML('afterbegin', markup);
   }

@@ -71,9 +71,12 @@ export default class Current {
         icon: res.data.weather[0].icon,
         // add wind speed
         wind: Math.round(res.data.wind.speed),
+        strongWindWarning: (res.data.wind.speed > 1 ? "strong wind" : ""),
       };
+      console.log("getWeather is executed")
     } catch (err) {
       // Div of main weather
+      console.log(err)
       const parent = document.querySelector('.main__weather');
 
       // Clear loader

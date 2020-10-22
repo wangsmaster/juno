@@ -74,7 +74,10 @@ export const renderWeather = (result, container, place) => {
       <!-- add wind speed -->
       <div class="main__weather__text--phrase animated fadeIn">Wind: ${result.weather.wind} m/s</div>
     </div>
-
+      <!-- add strong wind warning -->
+      <div class="main__weather__text--phrase animated fadeIn">Warning: ${result.weather.strongWindWarning}</div>
+    </div>
+      
     
   `;
     container.insertAdjacentHTML('afterbegin', markup);
@@ -113,6 +116,11 @@ export const renderWeather = (result, container, place) => {
     container.insertAdjacentHTML('beforeend', markup);
   }
 };
+
+// render warnings for extreme weather, will display conditionally
+export const renderWarning = (result, container, place) => {
+  // 
+}
 
 export const renderDeleteAll = parent => {
   const markup = `

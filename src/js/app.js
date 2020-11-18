@@ -318,5 +318,5 @@ window.addEventListener('load', () => {
 
   // Call current weather and other cities controller
   currentController(clothesController);
-  otherController();
+  // otherController();
 });

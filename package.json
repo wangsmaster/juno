@@ -10,6 +10,11 @@
   },
   "author": "fidalgo",
   "license": "ISC",
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "axios": "^0.18.0",
@@ -19,6 +24,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.4.3",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
@@ -33,7 +39,8 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "source-map-loader": "^1.0.0"
   },
   "browserslist": "> 0.25%, not dead"
 }

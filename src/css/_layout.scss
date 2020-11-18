@@ -23,14 +23,29 @@
 }
 
 .other {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 2rem;
+  display: flex; // set the element to flex layout
+  flex-direction: column;  // flex item are placed along column direction
+  flex: 1; // set flex-grow to 1, all children take equal space
+  padding: 2rem;  // 
 
   @media only screen and (max-width: $bp-tiny) {
     padding: 1rem;
   }
+}
+
+.recomms {
+  display: flex;
+  font-size: 2rem;
+
+}
+
+.clothes {
+  display: flex;
+  flex-direction: column;
+}
+
+.clothes p {
+  padding: 50px;
 }
 
 .title {

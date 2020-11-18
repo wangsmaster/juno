@@ -4,11 +4,12 @@ import Saved from './Models/Saved';
 import Current from './Models/Current';
 import Others from './Models/Others';
 import Forecast from './Models/Forecast';
+import {Clothes} from './Models/Clothes.js';
 
 // Dark
 import DarkMode from './Models/Dark';
 
-// Views
+// Viewss
 import * as base from './Views/base';
 import * as searchView from './Views/searchView';
 import * as homeView from './Views/homeView';
@@ -37,7 +38,7 @@ const darkmodeController = () => {
 };
 
 // - CURRENT LOCATION CONTROLLER -
-const currentController = async () => {
+const currentController = async (callback) => {
   // Render Loader
   const parent = document.querySelector('.main__weather');
   base.renderLoader(parent);
@@ -63,6 +64,7 @@ const currentController = async () => {
     // Render weather
     homeView.renderWeather(state.current, parent, 'main');
   }
+  callback();
 };
 
 // - OTHER LOCATIONs CONTROLLER -
@@ -101,6 +103,16 @@ const otherController = () => {
   });
 };
 
+// - CLOTHES CONTROLLER
+const clothesController = () => {
+  let clothes1 = new Clothes();
+  console.log("clothesController is executed!");
+
+  // trying to import temperature and weather from API
+  console.log("inside clothesController: current temperature from API:" + state.current.weather.temp);
+  console.log("inside clothesController: current weatherID from API:" + state.current.weather.weatherID);
+  clothes1.displayWeather(state.current.weather.temp, state.current.weather.weatherID);
+}
 // - FORECAST CONTROLLER -
 // Other param is true if forecast is from other city and not the current location
 const forescastController = async (current, data, other) => {
@@ -305,6 +317,6 @@ window.addEventListener('load', () => {
   state.saved.readLocal();
 
   // Call current weather and other cities controller
-  currentController();
+  currentController(clothesController);
   otherController();
 });

@@ -69,9 +69,10 @@ export default class Current {
         temp_min: Math.round(res.data.main.temp_min),
         name: res.data.weather[0].main,
         icon: res.data.weather[0].icon,
-        // add wind speed
+        weatherID: res.data.weather[0].id,
+        // add wind speed (m/s)
         wind: Math.round(res.data.wind.speed),
-        strongWindWarning: (res.data.wind.speed > 1 ? "strong wind" : ""),
+        strongWindWarning: (res.data.wind.speed > 5.5 ? "strong wind" : ""),
       };
       console.log("getWeather is executed")
     } catch (err) {

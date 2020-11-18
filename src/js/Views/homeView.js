@@ -38,6 +38,8 @@ export const renderHome = () => {
           <use xlink:href="./img/symbol-defs.svg#icon-plus"></use>
         </svg>
       </button>
+      <div class="recomms">
+      </div>
     </div>
   `;
   elements.container.innerHTML = markup;

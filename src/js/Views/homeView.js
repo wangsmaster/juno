@@ -25,19 +25,6 @@ export const renderHome = () => {
       <!-- -->
     </div>
     <div class="other">
-      <div class="title animated fadeIn">
-        <svg class="title__icon">
-          <use xlink:href="./img/symbol-defs.svg#icon-map"></use>
-        </svg>
-        <h1 class="title__text">Other Locations</h1>
-      </div>
-      <div class="cities">
-      </div>
-      <button class="add__city animated fadeIn">
-        <svg class="add__city--icon">
-          <use xlink:href="./img/symbol-defs.svg#icon-plus"></use>
-        </svg>
-      </button>
       <div class="recomms">
       </div>
     </div>

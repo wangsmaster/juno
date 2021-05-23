@@ -1,6 +1,6 @@
 # weather-app
 
-## [Check it here](https://weather.fidalgo.dev/)
+## [Check it here](https://wangsmaster.github.io/juno)
 
 ### Project made from scratch using Vanilla JS
 

@@ -65,7 +65,7 @@ export default class Current {
       this.country = res.data.sys.country;
       this.weather = {
         temp: Math.round(res.data.main.temp),
-        temp_max: Math.round(res.data.main.temp_max),
+        temp_max: Math.round(res.data.main.temp_max + 5), // max temp adjusted by +5C; this is due to offset between openweathermap API and google/apple weather app
         temp_min: Math.round(res.data.main.temp_min),
         name: res.data.weather[0].main,
         icon: res.data.weather[0].icon,

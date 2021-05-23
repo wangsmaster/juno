@@ -62,8 +62,9 @@ class Clothes {
         else if (temp > 0 && temp <= 5) temperature = "zero";
         else if (temp > 5 && temp <= 10) temperature = "five";
         else if (temp > 10 && temp <= 15) temperature = "ten";
-        else if (temp > 15 && temp <= 20) temperature = "ten";
-        else if (temp > 20) temperature = "twenty";
+        else if (temp > 15 && temp <= 20) temperature = "fifteen";
+        else if (temp > 20 && temp <=25) temperature = "twenty";
+        else if (temp > 25) temperature = "twenty_five";
 
         // pass a string of weather to 'weather'; use weatherID
         if (weatherID >= 800) weather = "non_rain";
@@ -87,26 +88,26 @@ class Clothes {
     lookup = {
         minus10C_non_rain: {
             top1: "tank top",
-            top2: "long sleeve *thermal*",
-            top3: "sweater / hoodie *thermal*",
+            top2: "long sleeve - thermal",
+            top3: "sweater or hoodie - thermal",
             top4: "down parka",
-            bottom1: "leggings *thermal*",
+            bottom1: "leggings - thermal",
             bottom3: "snow pants",
             shoe1: "snow boots",
             accs1: "scarf",
             accs2: "gloves",
-            accs3: "beanie *thermal*",
+            accs3: "beanie - thermal",
         }, 
         minus5C_non_rain: {
             top1: "tank top",
-            top2: "long sleeve *thermal*",
+            top2: "long sleeve - thermal",
             top4: "down parka",
-            bottom1: "leggings *thermal*",
+            bottom1: "leggings - thermal",
             bottom3: "snow pants",
             shoe1: "snow boots",
             accs1: "scarf",
             accs2: "gloves",
-            accs3: "beanie *thermal*",
+            accs3: "beanie - thermal",
         },
         zero_non_rain: {
             top1: "tank top",
@@ -123,7 +124,7 @@ class Clothes {
             top2: "long sleeve",
             top3: "down parka",
             top4: "muddy buddy",
-            bottom1: "legging",
+            bottom1: "leggings",
             bottom2: "sweatpants",
             shoe1: "leather sneaker",
             shoe2: "rain boots",
@@ -133,23 +134,22 @@ class Clothes {
         },
         five_non_rain: {
             top1: "long sleeve",
-            top2: "fleece",
-            top3: "trench coat *thermal*",
-            bottom1: "legging",
+            top3: "coat - thermal",
+            bottom1: "leggings",
             bottom2: "sweatpants",
             shoe1: "leather sneaker",
             accs1: "beanie",
         },
         five_rain: {
             top1: "long sleeve",
-            top2: "fleece",
-            top3: "trench coat *thermal*",
-            bottom1: "legging",
+            top3: "coat - thermal",
+            bottom1: "leggings",
             bottom2: "sweatpants",
             shoe1: "leather sneaker",
             shoe2: "rain boots",
             accs1: "beanie",
             accs2: "umbrella",
+            accs3: "muddy buddy",
         },
         ten_non_rain: {
             top1: "tee",
@@ -162,34 +162,37 @@ class Clothes {
         ten_rain: {
             top1: "tee",
             top2: "hoodie",
-            top3: "raincoat",
+            top3: "windbuster",
             bottom1: "pants",
             shoe1: "sneaker",
+            shoe2: "rain boots",
             accs1: "bucket hat",
             accs2: "umbrella",
+            accs3: "muddy buddy",
         },
         fifteen_non_rain: {
             top1: "tee",
             top2: "windbuster",
             bottom1: "pants",
-            shoe1: "sandals",
+            shoe1: "sandal",
             accs1: "sunglasses",
             accs2: "bucket hat",
             accs3: "sunscreen",
         },
         fifteen_rain: {
             top1: "tee",
-            top2: "raincoat",
+            top2: "windbuster",
             bottom1: "pants",
-            shoe1: "sandals",
+            shoe1: "sandal",
             shoe2: "rain boots",
             accs1: "umbrella",
+            accs2: "muddy buddy",
         },
         twenty_non_rain: {
             top1: "tee",
             top2: "sun jacket",
             bottom1: "capris",
-            shoe1: "sandals",
+            shoe1: "sandal",
             accs1: "sunglasses",
             accs2: "sun hat",
             accs3: "sunscreen",
@@ -198,15 +201,16 @@ class Clothes {
             top1: "tee",
             top2: "sun jacket",
             bottom1: "capris",
-            shoe1: "sandals",
+            shoe1: "sandal",
             shoe2: "rain boots",
             accs1: "umbrella",
+            accs2: "muddy buddy",
         },
         twenty_five_non_rain: {
             top1: "tank top",
             top2: "sun jacket",
             bottom1: "shorts",
-            shoe1: "sandals",
+            shoe1: "sandal",
             accs1: "sunglasses",
             accs2: "sun hat",
             accs3: "sunscreen",
@@ -215,9 +219,10 @@ class Clothes {
             top1: "tank top",
             top2: "sun jacket",
             bottom1: "shorts",
-            shoe1: "sandals",
+            shoe1: "sandal",
             shoe2: "rain boots",
             accs1: "umbrella",
+            accs2: "muddy buddy",
         },
 
         // template format

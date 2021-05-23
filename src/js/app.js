@@ -109,9 +109,10 @@ const clothesController = () => {
   console.log("clothesController is executed!");
 
   // trying to import temperature and weather from API
+  console.log(state.current)
   console.log("inside clothesController: current temperature from API:" + state.current.weather.temp);
   console.log("inside clothesController: current weatherID from API:" + state.current.weather.weatherID);
-  clothes1.displayWeather(state.current.weather.temp, state.current.weather.weatherID);
+  clothes1.displayWeather(state.current.weather.temp_max, state.current.weather.weatherID);
 }
 // - FORECAST CONTROLLER -
 // Other param is true if forecast is from other city and not the current location

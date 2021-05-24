@@ -52,7 +52,7 @@ export default class Current {
     try {
       const res = await axios.get(
         // `process` is a global object (of NodeJS) that provide information about, and control over the current Node.js process
-        `${process.env.PROXY}api.openweathermap.org/data/2.5/weather?lat=${
+        `https://api.openweathermap.org/data/2.5/weather?lat=${
           this.coords[0]
         }&lon=${this.coords[1]}&units=metric&appid=${process.env.APIKEY}`
       );

@@ -6,7 +6,7 @@ const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 module.exports = {
   entry: ['@babel/polyfill', './src/js/app.js'],
   output: {
-    publicPath: '/',
+    publicPath: argv.mode === 'production' ? '/juno' : '/',
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle.js',
   },

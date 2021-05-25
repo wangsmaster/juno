@@ -1,4 +1,4 @@
-# Juno，a weather station for Mom and Dad
+# Juno，a weather station for mom and dad :)
 
 ## [Check it here](https://wangsmaster.github.io/juno)
 
@@ -6,6 +6,4 @@ A weather station that not only provides weather forecast, but also offers cloth
 
 If you are using smartphone to access this website, please allow location service and feel free to save the link on your home screen.
 
-## More features to come
-
-### Project is forked from https://github.com/fidalgodev/weather-app
+## More features to come!

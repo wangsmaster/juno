@@ -25,8 +25,8 @@ class Clothes {
         // message.textContent = this.lookup.minus10C_any.accs1;
 
         // test
-        console.log("weatherObj is printed in the next line:")
-        console.log(this.lookup[weatherObj]);
+        // console.log("weatherObj is printed in the next line:")
+        // console.log(this.lookup[weatherObj]);
 
         // loop through an object with pre-determined weather
         // create a 'div' to contain each property;
@@ -71,14 +71,14 @@ class Clothes {
         else weather = "rain";
 
         let weatherObj = temperature + "_" + weather;
-        console.log("the type of weatherObj is " + typeof weatherObj);
+        // console.log("the type of weatherObj is " + typeof weatherObj);
         return weatherObj;
     }
 
     displayWeather(temp, weatherID) {
-        console.log("function displayWeather() is executed")
+        // console.log("function displayWeather() is executed")
         let weatherObj = this.selectWeatherObj(temp, weatherID);   // test mode
-        console.log("weatherObj is: " + weatherObj);
+        // console.log("weatherObj is: " + weatherObj);
         this.clothesRecommended(weatherObj);
     }
 

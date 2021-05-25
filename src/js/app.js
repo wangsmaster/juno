@@ -106,12 +106,12 @@ const otherController = () => {
 // - CLOTHES CONTROLLER
 const clothesController = () => {
   let clothes1 = new Clothes();
-  console.log("clothesController is executed!");
+  // console.log("clothesController is executed!");
 
   // trying to import temperature and weather from API
-  console.log(state.current)
-  console.log("inside clothesController: current temperature from API:" + state.current.weather.temp);
-  console.log("inside clothesController: current weatherID from API:" + state.current.weather.weatherID);
+  // console.log(state.current)
+  // console.log("inside clothesController: current temperature from API:" + state.current.weather.temp);
+  // console.log("inside clothesController: current weatherID from API:" + state.current.weather.weatherID);
   clothes1.displayWeather(state.current.weather.temp_max, state.current.weather.weatherID);
 }
 // - FORECAST CONTROLLER -
@@ -300,7 +300,7 @@ window.addEventListener('load', () => {
 
   // check if page is loaded
 
-  console.log('page is loaded');
+  // console.log('page is loaded');
 
   // Render Home
   base.clearUI();

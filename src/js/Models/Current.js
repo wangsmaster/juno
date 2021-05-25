@@ -72,7 +72,7 @@ export default class Current {
         wind: Math.round(res.data.wind.speed),
         strongWindWarning: (res.data.wind.speed > 5.5 ? "strong wind" : ""),
       };
-      console.log("getWeather is executed")
+      // console.log("getWeather is executed")
     } catch (err) {
       // Div of main weather
       console.log(err)

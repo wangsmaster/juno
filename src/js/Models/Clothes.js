@@ -42,7 +42,7 @@ class Clothes {
 
             let img = document.createElement("img");
             img.classList.add("clothes_img");
-            img.src = "/juno/img/clothes/" + this.lookup[weatherObj][property] +".svg"
+            img.src = "./img/clothes/" + this.lookup[weatherObj][property] +".svg"
             img.alt = this.lookup[weatherObj][property];
             div.append(img);
 
